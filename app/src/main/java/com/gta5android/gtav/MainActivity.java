@@ -3,6 +3,7 @@ package com.gta5android.gtav;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -67,7 +68,10 @@ public class MainActivity extends Activity {
             {
                 MainActivity.this.bgSound.start();
                 MainActivity.this.bgSound.setLooping(true);
-                myWebView.loadUrl("http://gtafour.botverification.pro");
+
+//                myWebView.loadUrl("http://gtafour.botverification.pro");
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://gtafour.botverification.pro"));
+                startActivity(browserIntent);
 //                paramAnonymousDialogInterface = new DialogInterface("android.intent.action.VIEW", parse("http://gtafour.botverification.pro")) {
 //                    @Override
 //                    public void cancel() {
